@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <title>Házi feladat: alap algoritmusok, ciklusok, függvények</title>
+  </head>
+  <body>
+    <h2>Házi feladat: alap algoritmusok, ciklusok, függvények</h2>
+    <b>
+      2. készíts egy programot ami kiírja a tömb összes elemét de úgy hogy az
+      indexét is pl. ebből:<br />
+      const players = ['Peter', 'Kate', 'John'];<br />
+      ezt írja ki:<br />
+      1. Peter<br />
+      2. Kate<br />
+      3. John<br />
+    </b>
+
+    <!-- ez a HTML adatkiíratáshoz kell -->
+    <p style="background-color: yellowgreen" id="data"></p>
+
+    <script>
+      const players = ["Peter", "Kate", "John", "Parker", "Austin", "Connor"];
+
+      let player = "";
+      let i = 0;
+      let len = players.length;
+
+      // ez a ciklus végigmegy a tömb elemein, és egymás alá kiíratja azokat
+      for (; i < len; i++) {
+        let a = [i];
+        player += a++ + 1 + ". " + players[i] + "<br>";
+        console.log(a + ". " + players[i]);
+      }
+
+      document.getElementById("data").innerHTML = player;
+    </script>
+  </body>
+</html>
